@@ -1,0 +1,784 @@
+/* Colors
+beige rgb(212, 201, 187)
+primary red rgb(248, 5, 5)
+dark beige rgb(140, 132, 116)
+darker red rgb(205, 6, 6)
+rose red rgb(224, 60, 60)
+dark grey rgb(47, 47, 47)
+*/
+
+/* Base Styles -------------------- */
+
+@import 'normalize.css';
+
+* {
+  box-sizing: border-box;
+  /*border: 1px solid darkgrey;*/
+}
+
+body {
+  margin: 0;
+  background-color: #88bfe8;
+  font-size: 1em;
+  line-height: 1.5;
+  font-family: 'Raleway', sans-serif, Arial;  
+  opacity: 1;
+  -webkit-transition: opacity 3s;
+  -moz-transition: opacity 3s;
+  -ms-transition: opacity 3s;
+  -o-transition: opacity 3s;
+  transition: opacity 3s;
+}
+
+body.fade-out {
+  opacity: 0;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+
+}
+
+p, h1, h2, h3, h4, li, ul, legend, input {
+  color: #fff;
+}
+
+.italic-text {
+  font-family: 'Norican', cursive;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: none;
+  color: rgb(212, 201, 187);
+}
+
+.container {
+  margin: auto;
+  margin-bottom: 200px;
+}
+
+h2 {
+  margin-bottom: 50px;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+/* Navbar Styling ------------------------------------------*/
+
+.navbar {
+  margin-bottom: 0;
+  background-color: rgb(224, 60, 60);
+  border: 0;
+  font-size: 11px !important;
+  letter-spacing: 4px;
+  opacity: 0.9;
+  }
+
+.nav-title {
+  font-family: 'Norican', cursive;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+.navbar li a, .navbar .navbar-brand { 
+    color: #fff !important;
+}
+.navbar-nav li a:hover {
+    color: rgb(212, 201, 187) !important;
+}
+.navbar-nav li.active a {
+    color: rgb(212, 201, 187) !important;
+    background-color: rgb(205, 6, 6) !important;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+.open .dropdown-toggle {
+    color: #000;
+    background-color: rgb(205, 6, 6) !important;
+}
+.dropdown-menu li a {
+    color: #FFF !important;
+}
+.dropdown-menu li a:hover {
+    background-color: rgb(205, 6, 6) !important;
+}
+.navbar-toggle:hover,
+.navbar-toggle:visited,
+.navbar-toggle:active {
+  background-color: rgba(224, 60, 60, 0.9) !important;
+}
+
+.icon-bar {
+  background-color: #fff !important;
+}
+
+/* Header Styling ------------------------------------------*/
+
+.main-header {
+  min-height: auto;
+  margin-top: 50px;
+}
+
+.logo {
+  margin-top: 20px;
+  max-width: 200px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 40%;
+  box-shadow: -3px 3px 5px rgba(0, 0, 0, .2),
+              3px 3px 5px rgba(0, 0, 0, .2);
+}
+
+.logo:hover {
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, .2);
+}
+
+.snowflake {
+  margin-bottom: 120px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.snowflake:hover {
+  width: 80px;
+  margin-bottom: 100px;
+  margin-right: 0;
+  margin-left: 0;
+  -webkit-transition: all 0.3s ease-in-out 0.05s;
+  -moz-transition: all 0.3s ease-in-out 0.05s;
+  -o-transition: all 0.3s ease-in-out 0.05s;
+  -ms-transition: all 0.3s ease-in-out 0.05s;
+  transition: all 0.3s ease-in-out 0.05s;    
+}
+
+.title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2em;
+}
+
+.titleitalic {
+ font-size: 5em;
+}
+
+.btn-down,
+.btn-next {
+  padding: 15px 20px;
+  white-space: nowrap;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 2px solid #fff;
+  background-color: transparent;
+  border-radius: 100px;
+  border-radius: 10rem;
+  letter-spacing: 0.5px;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  line-height: 1.5rem;
+  margin-bottom: 80px;
+  margin: auto;
+}
+
+.btn-next {
+  font-size: 0.8rem;
+  margin-right: 15px;
+  margin-top: 20px;
+}
+
+.btn-down:hover,
+.btn-next:hover {
+  background-color: rgba(224, 60, 60, 0.9);
+  border-color: rgb(224, 60, 60);
+  -webkit-transition: all 0.1s ease 0.1s;
+  -moz-transition: all 0.1s ease 0.1s;
+  -o-transition: all 0.1s ease 0.1s;
+  -ms-transition: all 0.1s ease 0.1s;
+  transition: all 0.1s ease 0.1s;  
+}
+
+.btn-down:active,
+.btn-down:focus,
+.btn-next:active,
+.btn-next:focus {
+  background-color: rgba(224, 60, 60, 0.9);
+  border-color: rgb(224, 60, 60);  
+}
+
+/* Countdown Styling ------------------------------------------*/
+
+#clock {
+  position: absolute;
+  top: -20px;
+  right: 30px;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-align: center;
+  max-width: 100%;
+  opacity: 0.9;
+}
+
+#clockdiv{
+  display: inline-block;
+  text-align: center;
+  font-size: 1.2em;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#clockdiv > div{
+  padding: 10px;
+  display: inline-block;
+
+}
+
+#clockdiv div > span{
+  background-color: rgb(224, 60, 60);
+  padding: 15px;
+  box-shadow: inset 0px 0px 5px 1px rgba(78, 108, 130, .6),
+              2px 2px 5px 1px rgba(0, 0, 0, .5);
+  display: inline-block;
+  min-width: 60px;
+  min-height: 60px;
+  border-radius: 10px;
+}
+
+.smalltext{
+  padding-top: 5px;
+  font-size: 0.6em;
+  font-weight: bold;
+}
+
+#clock > p {
+  color: #fff;
+  font-family: 'Norican', cursive;
+  font-weight: lighter;
+  font-size: 1.5rem;
+  letter-spacing: 0.8px;
+  letter-spacing: 0.06rem;  
+}
+
+/* Main Body styles ------------------ */
+
+.hohoho {
+  margin-right: 20px;
+  letter-spacing: 4px;
+  font-size: 2rem;
+  line-height: 5rem;
+}
+
+.instruction-box {
+  background-color: rgb(140, 132, 116);
+  border-radius: 10px;
+  max-width: 100%;
+  margin: 2px;
+  display: inline-block;
+  min-height: auto !important;
+  padding-top: 20px 10px;
+}
+
+.instruction-box:hover {
+  opacity: 0.9;
+  -webkit-transition: opacity 0.3s ease 0.3s;
+  -moz-transition: opacity 0.3s ease 0.3s;  
+  -o-transition: opacity 0.3s ease 0.3s;
+  -ms-transition: opacity 0.3s ease 0.3s;
+  transition: opacity 0.3s ease 0.3s;
+}
+
+.instruction-box h3 {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.instruction-box h3::first-letter {
+  font-size: 2.5rem;
+  font-family: 'Norican', cursive;
+}
+
+#learnmore {
+  margin-top: 300px;
+}
+
+.inline-link {
+  color: #fff;
+  background-color: rgba(224, 60, 60, 0.9);
+  padding: 3px 5px;
+  white-space: nowrap;
+  font-size: 0.7em;
+  font-weight: 700;
+  border-radius: 3px;
+  margin-right: 2px;
+  letter-spacing: 2px;
+  text-transform: uppercase;  
+  cursor: pointer;
+}
+
+.begin-container {
+  margin-top: 75px;
+}
+/* Form styles ---------------------------------------------------------- */
+
+form {
+  font-family: 'Raleway', sans-serif, Arial !important; 
+}
+
+legend {
+  font-size: 1.25rem;
+  padding: 10px 70px;
+}
+
+.form-control {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: rgb(224, 60, 60);
+  box-shadow: 0 0 8px rgb(224, 60, 60);
+}
+
+.form-group {
+  border: 5px solid #fff;
+  border-radius: 10px;
+  padding: 20px 20px;
+  width: auto;
+  color: red;
+  position: relative;
+  color: #fff;
+  display: block;
+}
+
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+}
+
+.close-icon:hover {
+  cursor: pointer;
+}
+
+fieldset {
+  border: none;
+  position: relative;
+}
+
+.user-add {
+  width: 20px;
+  margin-right: 20px;
+  position: absolute;
+  left: 80px;
+  bottom: 20px;
+  z-index: 10;
+}
+
+.user-delete {
+  width: 20px;
+  margin-left: 5px;
+  margin-right: -25px;
+}
+
+#form-1,
+#form-2,
+#form-3,
+#form-4,
+#form-5 {
+  z-index: 2;
+  background: #88bfe8;
+}
+
+.amount-input {
+  padding-right: 0;
+}
+
+select.form-control {
+  margin-left: -5px;
+  text-align: center;
+}
+
+.error-input {
+  border: 2px solid rgb(205, 6, 6);
+  box-shadow: 0 0 15px rgb(205, 6, 6);
+}
+
+.error-message {
+  color: #fff;
+  background-color: rgba(224, 60, 60, 0.9);
+  padding: 3px 5px;
+  /*white-space: nowrap;*/
+  font-size: 0.7em;
+  font-weight: 700;
+  border-radius: 3px;
+  margin-right: 2px;
+  letter-spacing: 2px;
+  text-transform: uppercase;  
+  /*display: inline-block;*/
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;  
+}
+
+#text {
+  width: 70%;
+  resize: none;
+  min-height: 150px;
+}
+
+.review {
+  margin: 10px;
+  border: 2px solid #fff;
+}
+
+.review:hover {
+  background: rgba(224, 60, 60, 0.9);
+  border-color: rgb(224, 60, 60);
+  -webkit-transition: all 0.1s ease 0.1s;
+  -moz-transition: all 0.1s ease 0.1s;
+  -o-transition: all 0.1s ease 0.1s;
+  -ms-transition: all 0.1s ease 0.1s;
+  transition: all 0.1s ease 0.1s;  
+  cursor: pointer;
+}
+
+/* iPhones and other smartphones ---------------------------------------- */
+@media(max-width:500px){
+  .nav-title {
+    font-size: 1rem;
+  }   
+  .navbar-brand {
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+  }
+  .container {
+    margin-bottom: 100px;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  .main-header {
+    padding-right: 15px;
+    padding-top: 30px;
+  }
+  .logo {
+    max-width: 70px;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 40%;
+    box-shadow: -1,5px 1.5px 2.5px rgba(0, 0, 0, .2),
+                1.5px 1.5px 2.5px rgba(0, 0, 0, .2);
+    position: absolute;
+    top: -10px;
+    left: 10px;
+  }
+  .logo:hover {
+    box-shadow: 1.5px 1.5px 2.5px rgba(0, 0, 0, .2);
+  }
+  .title {
+    font-size: 0.37em;
+  }
+  .titleitalic {
+    font-size: 1em;
+  }  
+  .snowflake {
+    visibility: hidden;
+  }
+  .snowflake-box {
+    height: 30px;
+  }
+  .main-title {
+    margin-left: 0;
+  }
+  .btn-down,
+  .btn-next {
+    font-size: 0.3333rem;
+    padding: 4.5px 6px;
+    margin-top: 50px;
+  }
+  #clock {
+    position: initial;
+    margin: auto;
+    margin-top: -10px;
+    margin-bottom: 100px;
+    text-align: center;
+    max-width: 100%;
+  }    
+  #clockdiv > div{
+    padding: 6.6667px;
+    display: inline-block;
+  }
+  #clockdiv div > span{
+    background-color: rgb(224, 60, 60);
+    padding: 10px;
+    box-shadow: inset 0px 0px 5px 1px rgba(78, 108, 130, .6),
+                2px 2px 5px 1px rgba(0, 0, 0, .5);
+    display: inline-block;
+    min-width: 40px;
+    min-height: 40px;
+  }
+  .smalltext{
+    padding-top: 5px;
+    font-size: 0.6em;
+    font-weight: bold;
+  }
+  #clock > p {
+    font-size: 1rem;
+    letter-spacing: 0.8px;
+    letter-spacing: 0.06rem;  
+  }  
+  .instruction-box {
+    font-size: 0.8rem;
+  }  
+  .instruction-box h3{
+    font-size: 0.8rem;
+  }    
+  .instruction-box h3::first-letter {
+    font-size: 1.6rem;
+  }    
+  #form-1,
+  #form-2,
+  #form-3,
+  #form-4,
+  #form-5 {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  legend {
+    font-size: 1rem;
+    padding: 20px 10px 5px 10px;
+  }
+  label {
+    text-align: center !important;
+  }
+  select.form-control {
+    margin-left: 0;
+  }  
+  #text {
+    width: 100%;
+    resize: none;
+  }
+}
+
+/* Extra Small */
+@media(min-width:501px) and (max-width:767px){
+  .nav-title {
+    font-size: 1rem;
+  } 
+  h2 {
+    font-size: 1.5rem;
+  }  
+  .main-header {
+    padding-right: 15px;
+    padding-top: 30px;
+  }
+  .logo {
+    max-width: 70px;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 40%;
+    box-shadow: -1,5px 1.5px 2.5px rgba(0, 0, 0, .2),
+                1.5px 1.5px 2.5px rgba(0, 0, 0, .2);
+    position: absolute;
+    top: -10px;
+    left: 10px;
+  }
+
+  .logo:hover {
+    box-shadow: 1.5px 1.5px 2.5px rgba(0, 0, 0, .2);
+  }
+
+  .title {
+    font-size: 0.56em;
+  }
+  .titleitalic {
+    font-size: 1.5em;
+  }  
+  .snowflake {
+    visibility: hidden;
+  }
+  .snowflake-box {
+    height: 30px;
+  }
+  .main-title {
+    margin-left: -70px;
+  }
+  .btn-down,
+  .btn-next {
+    font-size: 0.5rem;
+    padding: 6.75px 9px;
+  }
+  #clock {
+    position: initial;
+    margin: auto;
+    margin-top: -40px;
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 100%;
+  }    
+  .instruction-box {
+    font-size: 1rem;
+  }  
+  .instruction-box h3{
+    font-size: 1rem;
+  }  
+  .instruction-box h3::first-letter {
+    font-size: 2rem;
+  }  
+
+  .form-control {
+    width: 60%;
+    margin: auto;
+    display: inline-block;
+  }
+
+  select.form-control {
+    margin-left: 0;
+  }  
+
+  label {
+    text-align: center;
+    display: block;
+  }
+
+  #form-1,
+  #form-2,
+  #form-3,
+  #form-4,
+  #form-5 {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  legend {
+    font-size: 1.2rem;
+    padding: 20px 10px 5px 10px;
+  }
+
+  #amount {
+    margin-right: 0;
+    padding-right: 0;
+  }
+}
+
+/* Small */
+@media(min-width:768px) and (max-width:991px){
+  .logo {
+    text-align: center;
+    max-width: 133.33px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 40%;
+    box-shadow: -2px 2px 3.33px rgba(0, 0, 0, .2),
+                2px 2px 3.33px rgba(0, 0, 0, .2);
+  }
+
+  .logo:hover {
+    box-shadow: 2px 2px 3.33px rgba(0, 0, 0, .2);
+  }
+
+  .title {
+    font-size: 1.33em;
+  }
+  .titleitalic {
+   font-size: 3.33em;
+  }   
+
+  .btn-down,
+  .btn-next {
+    font-size: 0.6667rem;
+    padding: 10px 13.3333px;
+    margin-bottom: 50px;
+  }
+  .btn-next {
+    margin-bottom: 0;
+  }
+
+  #clock {
+    position: initial;
+    margin: auto;
+    margin-top: -40px;
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 100%;
+  }  
+  .instruction-box {
+    font-size: 1rem;
+  }
+  .instruction-box h3::first-letter {
+    font-size: 2rem;
+  }  
+
+  .addedUser {
+    margin-right: 4px;
+  }
+}
+
+/* Medium */
+@media(min-width:992px) and (max-width:1199px){
+  .logo {
+    margin-top: 20px;
+    max-width: 200px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 40%;
+    box-shadow: -3px 3px 5px rgba(0, 0, 0, .2),
+                3px 3px 5px rgba(0, 0, 0, .2);
+  }
+
+  .logo:hover {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .2);
+  }  
+  .addedUser {
+    margin-right: 4px;
+  }
+}
+
+/* Large */
+@media(min-width:1200px){
+  .logo {
+    margin-top: 20px;
+    max-width: 200px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 40%;
+    box-shadow: -3px 3px 5px rgba(0, 0, 0, .2),
+                3px 3px 5px rgba(0, 0, 0, .2);
+  }
+
+  .logo:hover {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .2);
+  }  
+  .addedUser {
+    margin-right: 4px;
+  }
+}
+
+
+
+
+
+
+/* Colors
+beige rgb(212, 201, 187)
+primary red rgb(248, 5, 5)
+dark beige rgb(140, 132, 116)
+darker red rgb(205, 6, 6)
+rose red rgb(224, 60, 60)
+dark grey rgb(47, 47, 47)
+*/

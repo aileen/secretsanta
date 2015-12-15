@@ -1,0 +1,230 @@
+/* Base Styles -------------------- */
+
+@import 'normalize.css';
+
+* {
+  box-sizing: border-box;
+  border: 1px solid darkgrey;
+}
+
+body {
+  margin: 0;
+  font: 1em/1.5 'Raleway', sans-serif, Arial;
+  background-color: #88bfe8;
+}
+
+h1 {
+  color: #fff;
+  font-family: 'Norican', cursive;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header Styling ------------------------------------------*/
+
+.main-header {
+  text-align: center;
+  min-height: auto;
+}
+
+.logo {
+  margin-top: 20px;
+  max-width: 200px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 40%;
+  box-shadow: -3px 3px 5px rgba(0, 0, 0, .2),
+              3px 3px 5px rgba(0, 0, 0, .2);
+}
+
+.logo:hover {
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, .2);
+}
+
+.snowflake {
+  margin-bottom: 120px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.snowflake:hover {
+  width: 80px;
+  margin-bottom: 100px;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2em;
+}
+
+.titleitalic {
+ font-size: 5em;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 15px 20px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -user-select: none;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  border-radius: 100px;
+  border-radius: 10rem;
+  letter-spacing: 0.5px;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  -webkit-transition: color 0.2s ease-in-out 0s, border-color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
+  transition: color 0.2s ease-in-out 0s, border-color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
+  line-height: 1.5rem;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.icon--down::after {
+  content: "\25be"
+}
+
+.icon--down {
+  text-align: left;
+}
+
+/* Countdown Styling ------------------------------------------*/
+
+#clock {
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-align: center;
+  max-width: 100%;
+  border: 10px solid #000;
+}
+
+#clockdiv{
+  display: inline-block;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+#clockdiv > div{
+  padding: 10px;
+  display: inline-block;
+
+}
+
+#clockdiv div > span{
+  color: #fff;
+  padding: 15px;
+  border-radius: 50%;
+  background: url("../img/snowflake2.png") no-repeat center/cover,
+              rgb(136, 191, 232);
+  box-shadow: inset 0px 0px 5px 1px rgba(78, 108, 130, .6),
+              2px 2px 5px 1px rgba(0, 0, 0, .5);
+  display: inline-block;
+  min-width: 60px;
+  min-height: 60px;
+}
+
+.smalltext{
+  padding-top: 5px;
+  font-size: 16px;
+}
+
+/* Main Body styles ------------------ */
+
+.intro {
+  /*float: right;*/
+}
+
+/* Float Clearfix ------------------ */
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Media Queries at 800px and 600px -----------------------*/
+
+@media screen and (max-width: 800px) { 
+  .logo {
+    max-width: 133.33px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 40%;
+    box-shadow: -2px 2px 3.33px rgba(0, 0, 0, .2),
+                2px 2px 3.33px rgba(0, 0, 0, .2);
+  }
+
+  .logo:hover {
+    box-shadow: 2px 2px 3.33px rgba(0, 0, 0, .2);
+  }
+
+  .title {
+    font-size: 1.33em;
+  }
+  .titleitalic {
+   font-size: 3.33em;
+  }  
+}
+
+/* Media Queries at 800px and 600px -----------------------*/
+
+@media screen and (max-width: 600px) { 
+  .main-header {
+    /*text-align: right;*/
+    padding-right: 15px;
+    padding-top: 30px;
+  }
+/*  .logo {
+    max-width: 70px;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 40%;
+    box-shadow: -1,5px 1.5px 2.5px rgba(0, 0, 0, .2),
+                1.5px 1.5px 2.5px rgba(0, 0, 0, .2);
+    position: absolute;
+    top: -10px;
+    left: 10px;
+  }
+
+  .logo:hover {
+    box-shadow: 1.5px 1.5px 2.5px rgba(0, 0, 0, .2);
+  }*/
+
+  .title {
+    font-size: 0.56em;
+    text-align: right;
+  }
+  .titleitalic {
+   font-size: 1.5em;
+   text-align: right;
+  }  
+}
+
+
+/* Colors
+beige rgb(212, 201, 187)
+primary red rgb(248, 5, 5)
+dark beige rgb(140, 132, 116)
+darker red rgb(205, 6, 6)
+rose red rgb(224, 60, 60)
+dark grey rgb(47, 47, 47)
+*/

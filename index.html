@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <title>Who's my Secret Santa?</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700italic,400italic,700,400|Raleway:400,600,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Norican' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  </head>
+
+  <body class="container-fluid"><script>document.body.className += ' fade-out';</script> 
+
+    <!-- Navigation Begin -->
+    <nav id="nav" class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="#top">Who's my <span class="nav-title">Secret Santa?</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#learnmore">LEARN MORE</a></li>
+            <li><a href="#form-1" onclick="startForm('form-1')">DRAW NAMES</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navigation End -->
+    <div id="top"></div>
+    <!-- Header Begin -->
+    <header class="main-header">
+      <div class="row">
+        <div class="col-xs-2 col-sm-12 col-md-12 col-lg-12 text-center">
+          <img class="image-responsive logo" src="img/santa.png" alt="Santa">
+        </div>
+        <div class="col-xs-10 col-sm-12 col-md-12 col-lg-12 text-center">
+          <h1 class="main-title"><span class="title">Who's my </span></br><span class="italic-text titleitalic">Secret Santa?</span></h1>
+        </div>
+      </div>
+      <div class="row text-center snowflake-box">
+        <img class="snowflake" src="img/snowflake1.png" width="60px">
+        <img class="snowflake" src="img/snowflake2.png" width="60px">
+        <img class="snowflake" src="img/snowflake1.png" width="60px">
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Counter Clock Begin -->
+    <div id="clock">
+      <div id="clockdiv">
+        <div>
+          <span class="days"></span>
+          <div class="smalltext">Days</div>
+        </div>
+        <div>
+          <span class="hours"></span>
+          <div class="smalltext">Hours</div>
+        </div>
+        <div>
+          <span class="minutes"></span>
+          <div class="smalltext">Minutes</div>
+        </div>
+        <div>
+          <span class="seconds"></span>
+          <div class="smalltext">Seconds</div>
+        </div>
+      </div>
+      <p>...until Christmas!!</p>
+    </div>
+    <!-- Counter Clock End -->
+
+    <div class="row text-center">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <a class="btn btn-primary btn-down" href="#learnmore">Learn more <i class="fa fa-angle-down"></i></a>
+      </div>
+    </div>
+
+    <!-- Learn More Begin -->
+		<div id="learnmore" class="container">
+      <div class="row text-center begin-container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <h2><span class="italic-text hohoho">ho ho ho!</span></br>Welcome to Secret Santa! See, how easy it is:</h2>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 instruction-box">
+          <h3>1. Give us names!</h3>
+          <p>You tell us the names and email-adresses of all your friends, select a budget and choose a day when the magical gift exchanging is happening <a class="inline-link" onclick="startForm('form-1')" >just here</a>.</p>
+        </div>
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 instruction-box">
+          <h3>2. We do all the magic!</h3>
+          <p>We put everything in our magic mixer and build some nice the emails. Just by pure magic! And the best is: Nodoby will know who got matched with who, cause it's... tadaaaaa.... SECRET Santa!</p>
+        </div>
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 instruction-box">
+          <h3>3. Choose a gift and present it!</h3>
+          <p>Find a nice gift for the person you got matched to. If you need inspiration, you can check out our <a class="inline-link" href="#">gift-generator</a>. Then it's your turn to let the magic happen!</p>
+        </div>     
+      </div>
+      <h2 class="text-center">Got it? Very easy, isn't it? Click on "Let's start" when you're ready for the magic</h2>
+      <div class="row text-center">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <a id="btn-start"class="btn btn-primary btn-down" onclick="startForm('form-1')">Let's start <i class="fa fa-angle-down"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- Learn More End -->
+
+    <!-- Form Begin -->
+    <div id="form" class="container">
+      <div class="form begin-container text-center">
+        <form class="form-inline">  
+          <div id="form-1" class="form-group" style="display: none;">
+            <img class="close-icon" src="icons/close_white.png" onclick="closeForm('form-1')" onmouseover="hover(this, 'icons/close_red.png')" onmouseout="unhover(this, 'icons/close_white.png')" data-toggle="tooltip" title="Cancel">
+            <fieldset id="name-fieldset">
+              <legend id="name-email" class="text-center">Enter Names and Email of all little Secret Santas (and don't forget yourself)</legend>
+              <p>You need at least three participants</p>
+              <p class="row" id="user-1">
+                <label id="name-lbl-1" for="name-1">Name: </label>
+                <input type="text" id="name-1" class="form-control" placeholder="Name" required />
+                <label id="mail-lbl-1" for="mail-1">Email: </label>
+                <input type="email" id="mail-1" class="form-control" placeholder="Email" required />
+              </p>
+              <p class="row" id="user-2">
+                <label id="name-lbl-2" for="name-2">Name: </label>
+                <input type="text" id="name-2" class="form-control" placeholder="Name" required />
+                <label id="mail-lbl-2" for="mail-2">Email: </label>
+                <input type="email" id="mail-2" class="form-control" placeholder="Email" required />
+              </p> 
+              <p class="row" id="user-3">
+                <label id="name-lbl-3" for="name-3">Name: </label>
+                <input type="text" id="name-3" class="form-control" placeholder="Name" required />
+                <label id="mail-lbl-3" for="mail-3">Email: </label>
+                <input type="email" id="mail-3" class="form-control" placeholder="Email" required />
+              </p>                         
+              <img id="add-user" src="icons/user_add_unhover.png" class="user-add" onclick="addPerson('name-email')" onmouseover="hover(this, 'icons/user_add_hover.png')" onmouseout="unhover(this, 'icons/user_add_unhover.png')" alt="Add Person" data-toggle="tooltip" title="Add a Person">
+              <div class="row">
+                <div class="text-right col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <button id="submit-name-email" type="submit" class="btn btn-primary btn-next" onclick="submitNames('#form-1', '#form-2')">Next step <i class="fa fa-angle-right"></i></button>  
+                </div>
+              </div>       
+            </fieldset>
+          </div>
+          
+          <div id="form-2" class="form-group" style="display: none;">
+            <img class="close-icon" src="icons/close_white.png" onclick="closeForm('form-2')" onmouseover="hover(this, 'icons/close_red.png')" onmouseout="unhover(this, 'icons/close_white.png')" data-toggle="tooltip" title="Cancel">
+            <fieldset id="date-fieldset">
+              <legend>Tell us the date of your Secret Santa gift exchange party</legend>
+              <p>
+                <label for="date">Select a date:</label>
+                <input type="date" id="date" class="form-control text-center" placeholder="dd/mm/yyyy" required/>
+              </p>
+              <div class="row">
+                <div class="text-left col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                  <button id="go-back-names" type="reset" class="btn btn-primary btn-next" onclick="goBack('#form-2', '#form-1')"><i class="fa fa-angle-left"></i> Go back</button>  
+                </div>
+                <div class="text-right col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                  <button id="submit-date" type="submit" class="btn btn-primary btn-next" onclick="submitDate('#form-2', '#form-3')">Next step <i class="fa fa-angle-right"></i></button>  
+                </div>
+              </div>  
+            </fieldset>
+          </div>
+
+          <div id="form-3" class="form-group" style="display: none;">
+            <img class="close-icon" src="icons/close_white.png" onclick="closeForm('form-3')" onmouseover="hover(this, 'icons/close_red.png')" onmouseout="unhover(this, 'icons/close_white.png')" data-toggle="tooltip" title="Cancel">            
+            <fieldset id="date-fieldset">
+              <legend>Alright, now let us know how much you guys wanna spend for the gift:</legend>
+              <p>
+                <div class="row">
+                  <div class="amount-input col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <label for="amount">Amount:</label>
+                    <input type="text" id="amount" class="form-control text-center" placeholder="Amount" />
+                    <select name="currency" id="currency" class="form-control selectpicker" data-toggle="tooltip" title="Choose a currency">
+                      <option value="EUR" selected>&euro; EUR</option> 
+                      <option value="USD">$ USD</option>
+                      <option value="CAD">$ CAD</option>
+                      <option value="AUD">$ AUD</option>
+                      <option value="GBP">&pound; GBP</option>
+                      <option value="CHF">CHF</option>
+                      <option value="CNY">&yen; CNY</option>
+                      <option value="JPY">&yen; JPY</option>
+                      <option value="MXN">$ MXN</option>
+                      <option value="PHP">PHP</option>
+                      <option value="RUB">RUB</option>
+                    </select>
+                  </div>
+                </div>
+              </p>       
+              <div class="row">
+                <div class="text-left col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                  <button id="go-back-date" type="reset" class="btn btn-primary btn-next" onclick="goBack('#form-3', '#form-2')"><i class="fa fa-angle-left"></i> Go back</button>  
+                </div>
+                <div class="text-right col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                  <button id="submit-amount" type="submit" class="btn btn-primary btn-next" onclick="submitAmount('#form-3', '#form-4')">Next step <i class="fa fa-angle-right"></i></button>  
+                </div>
+              </div>       
+            </fieldset>       
+          </div>
+
+          <div id="form-4" class="form-group" style="display: none;">
+            <img class="close-icon" src="icons/close_white.png" onclick="closeForm('form-4')" onmouseover="hover(this, 'icons/close_red.png')" onmouseout="unhover(this, 'icons/close_white.png')" data-toggle="tooltip" title="Cancel">            
+            <fieldset>
+              <legend>Wanna send a message as well? Put it in here and make it more personal:</legend>
+                <div class="row">
+                  <div class="text-input text-center col-xs-12 col-sm-12 col-md-12 col-lg-12">              
+                    <label for="text">Message: </label>
+                    <textarea id="text" class="form-control" placeholder="Write something nice"></textarea>
+                  </div>
+                </div>
+              <div class="row">
+                <div class="text-left col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                  <button id="go-back-amount" type="reset" class="btn btn-primary btn-next" onclick="goBack('#form-4', '#form-3')"><i class="fa fa-angle-left"></i> Go back</button>  
+                </div>
+                <div class="text-right col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                  <button id="submit-message" type="submit" class="btn btn-primary btn-next" onclick="submitMessage('#form-4', '#form-5')">Next step <i class="fa fa-angle-right"></i></button>  
+                </div>
+              </div>            
+            </fieldset>
+          </div>
+
+          <div id="form-5" class="form-group text-center" style="display: none;">
+            <img class="close-icon" src="icons/close_white.png" onclick="closeForm('form-5')" onmouseover="hover(this, 'icons/close_red.png')" onmouseout="unhover(this, 'icons/close_white.png')" data-toggle="tooltip" title="Cancel">            
+            <fieldset>
+              <legend>Let's see, what we've got so far:</legend>
+              <div class="form-group review" id="names-review-form" data-toggle="tooltip" title="Click to go back and make some changes">
+                <label for="names-review">The Secret Santas: </label>
+                <ol id="names-review" class="text-left">
+                </ol>
+              </div>
+              <div class="form-group review" id="date-review-form" data-toggle="tooltip" title="Click to go back and make some changes">
+                <div class="row">
+                  <div class="text-center col-xs-12 col-sm-12 col-md-12 col-lg-12">              
+                    <label for="date-review">Your gift exchange party is on: </label>
+                  </div>
+                  <div class="text-center col-xs-12 col-sm-12 col-md-12 col-lg-12">  
+                    <p class="form-control-static" id="date-review">date</p>
+                  </div>
+                </div>  
+              </div> 
+              <div class="form-group review" id="amount-review-form" data-toggle="tooltip" title="Click to go back and make some changes">
+                <div class="row">
+                  <div class="text-center col-xs-12 col-sm-12 col-md-12 col-lg-12">              
+                    <label for="amount-review">Your budget is: </label>
+                  </div>
+                  <div class="text-center col-xs-12 col-sm-12 col-md-12 col-lg-12">                      
+                    <p class="form-control-static" id="amount-review">amout + currency</p>
+                  </div>
+                </div>  
+              </div>
+              <div class="form-group review" id="message-review-form" data-toggle="tooltip" title="Click to go back and make some changes">
+                <div class="row">
+                  <div class="text-center col-xs-12 col-sm-12 col-md-12 col-lg-12">              
+                    <label for="message-review">And last but not least your personal message: </label>
+                  </div>
+                  <div class="text-center col-xs-12 col-sm-12 col-md-12 col-lg-12">                      
+                    <p class="form-control-static" id="message-review">message</p>
+                  </div>
+                </div>                  
+              </div>
+              <div class="form-group text-center review">
+                <div>
+                  <h5>If you need to change anything, just go back or click on the tile!</h5>
+                  <p class="lead">Everything fine? Fantastic! Just click on "MIX IT", and let the magic happen!<p>
+                </div>
+              </div>
+            <div class="row">
+                <div class="text-left col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                  <button id="go-back-message" type="reset" class="btn btn-primary btn-next" onclick="goBack('#form-5', '#form-4')"><i class="fa fa-angle-left"></i> Go back</button>  
+                </div>
+                <div class="text-right col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                  <button id="submit-all" type="submit" class="btn btn-primary btn-next" onclick="mixSantas()" data-toggle="tooltip" title="Let the magic happen!">Mix it! <i class="fa fa-angle-right"></i></button>  
+                </div>
+              </div>   
+            </fieldset>
+          </div>
+
+        </form>
+        </div>
+      </div>
+      <!-- Form End -->
+
+		
+		<footer class="main-footer">
+			<p>You like what you see? <a href="#">Aileen Nowak</a>.</p>
+			<a href="#top">Back to top &raquo;</a>
+		</footer>
+    <script src="js/clock.js"></script>
+    <script>
+      $(document).ready(function(){
+        //remove fade-out class of body
+        $('body').removeClass('fade-out');
+
+        // Initialize Tooltip
+        $('[data-toggle="tooltip"]').tooltip(); 
+
+        // Add smooth scrolling to all links in navbar + footer + buttons link
+        $(".navbar a, footer a, .btn-dowm").on('click', function(event) {
+
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          // var hash = this;
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function(){
+         
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        });
+      })
+
+      equalheight = function(container){
+
+        var currentTallest = 0,
+            currentRowStart = 0,
+            rowDivs = new Array(), 
+            $el,
+            topPosition = 0;
+
+         $(container).each(function() {
+
+           $el = $(this);
+           $($el).height('auto')
+           topPostion = $el.position().top;
+
+           if (currentRowStart != topPostion) {
+             for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+               rowDivs[currentDiv].height(currentTallest);
+             }
+             rowDivs.length = 0; // empty the array
+             currentRowStart = topPostion;
+             currentTallest = $el.height();
+             rowDivs.push($el);
+           } else {
+             rowDivs.push($el);
+             currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+          }
+           for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+             rowDivs[currentDiv].height(currentTallest);
+           }
+         });
+        }
+
+      $(window).load(function() {
+        equalheight('.instruction-box');
+      });
+
+
+      $(window).resize(function(){
+        equalheight('.instruction-box');
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+      var $window = $(window);
+
+        // Function to handle changes to style classes based on window width
+        function checkWidth() {
+        if ($window.width() < 700) {
+            $('.instruction-box').removeClass('col-xs-3 col-sm-3 col-md-3 col-lg-3').addClass('col-xs-12 col-sm-12 col-md-12 col-lg-12');
+            };
+
+        if ($window.width() >= 700) {
+            $('.instruction-box').removeClass('col-xs-12 col-sm-12 col-md-12 col-lg-12').addClass('col-xs-3 col-sm-3 col-md-3 col-lg-3');
+          }
+        }
+
+        // Execute on load
+        checkWidth();
+
+        // Bind event listener
+        $(window).resize(checkWidth);
+      });
+    </script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
